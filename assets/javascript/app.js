@@ -1,8 +1,43 @@
+//Score Variables
+  var correct = 0;
+  var incorrect = 0;
+  var unanswered = 0;
+
 window.onload = function(){
   $('#stop').click(stopwatch.stop);
   $('#reset').click(stopwatch.reset);
   $('#start').click(stopwatch.start);
 };
+
+// Trivia questions
+
+function questionOne(){
+  $("#question").append("<h3>What is two plus two?</h3>");
+  $("#answerOne").append("<button type='submit' class='submit' name='question1' value='incorrect'>5</button><br>");
+  $("#answerTwo").append("<button type='submit' class='submit' name='question1' value='incorrect'>9</button><br>");
+  $("#answerThree").append("<button type='submit' class='submit' name='question1' value='incorrect'>3</button><br>");
+  $("#answerFour").append("<button type='submit' class='submit' name='question1' value='incorrect'>8</button><br>");
+  $("#answerFive").append("<button type='submit' class='submit' name='question1' value='correct'>4</button><br>");
+
+
+    $(".submit").click(function(){
+      questionTwo();
+    });
+}
+
+function questionTwo(){
+  $("#question").replaceWith("<h3>What is three plus two?</h3>");
+  $("#answerOne").replaceWith("<button type='submit' class='submit' name='question1' value='correct'>5</button><br>");
+  $("#answerTwo").replaceWith("<button type='submit' class='submit' name='question1' value='incorrect'>7</button><br>");
+  $("#answerThree").replaceWith("<button type='submit' class='submit' name='question1' value='incorrect'>2</button><br>");
+  $("#answerFour").replaceWith("<button type='submit' class='submit' name='question1' value='incorrect'>9</button><br>");
+  $("#answerFive").replaceWith("<button type='submit' class='submit' name='question1' value='incorrect'>3</button><br>");
+
+
+    $(".submit").click(function(){
+      alert("Game Over");
+    });
+}
 
 var stopwatch = {
   time:30,
@@ -12,6 +47,7 @@ var stopwatch = {
   },
   start: function(){
     counter = setInterval(stopwatch.count, 1000);
+    questionOne()
   },
   stop: function(){
     clearInterval(counter);
