@@ -14,11 +14,11 @@ window.onload = function(){
 
 function questionOne(){
   $("#question").append("<h3>What is two plus two?</h3>");
-  $("#answerOne").append("<button type='submit' class='submit' name='question1' value='incorrect' id='myBtnOne'>5</button><br>");
-  $("#answerTwo").append("<button type='submit' class='submit' name='question1' value='incorrect' id='myBtnTwo'>9</button><br>");
-  $("#answerThree").append("<button type='submit' class='submit' name='question1' value='incorrect' id='myBtnThree'>3</button><br>");
-  $("#answerFour").append("<button type='submit' class='submit' name='question1' value='incorrect' id='myBtnFour'>8</button><br>");
-  $("#answerFive").append("<button type='submit' class='submit' name='question1' value='correct' id='myBtnFive'>4</button><br>");
+  $("#answerOne").append("<button class='submit' value='incorrect'>5</button><br>");
+  $("#answerTwo").append("<button class='submit' value='incorrect'>9</button><br>");
+  $("#answerThree").append("<button class='submit' value='incorrect'>3</button><br>");
+  $("#answerFour").append("<button class='submit' value='incorrect'>8</button><br>");
+  $("#answerFive").append("<button class='submit' value='correct'>4</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -40,11 +40,11 @@ function questionOne(){
 
 function questionTwo(){
   $("#question").empty().append("<h3>What is three plus two?</h3>");
-  $("#answerOne").empty().append("<button type='submit' class='submit' name='question2' value='correct'>5</button><br>");
-  $("#answerTwo").empty().append("<button type='submit' class='submit' name='question2' value='incorrect'>7</button><br>");
-  $("#answerThree").empty().append("<button type='submit' class='submit' name='question2' value='incorrect'>2</button><br>");
-  $("#answerFour").empty().append("<button type='submit' class='submit' name='question2' value='incorrect'>9</button><br>");
-  $("#answerFive").empty().append("<button type='submit' class='submit' name='question2' value='incorrect'>3</button><br>");
+  $("#answerOne").empty().append("<button class='submit' value='correct'>5</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>7</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>2</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>9</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>3</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -66,11 +66,11 @@ function questionTwo(){
 
 function questionThree(){
   $("#question").empty().append("<h3>What is the color brown?</h3>");
-  $("#answerOne").empty().append("<button type='submit' class='submit' name='question3' value='correct'>5</button><br>");
-  $("#answerTwo").empty().append("<button type='submit' class='submit' name='question3' value='incorrect'>7</button><br>");
-  $("#answerThree").empty().append("<button type='submit' class='submit' name='question3' value='incorrect'>2</button><br>");
-  $("#answerFour").empty().append("<button type='submit' class='submit' name='question3' value='incorrect'>9</button><br>");
-  $("#answerFive").empty().append("<button type='submit' class='submit' name='question3' value='incorrect'>3</button><br>");
+  $("#answerOne").empty().append("<button class='submit' value='correct'>5</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>7</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>2</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>9</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>3</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -95,9 +95,9 @@ function results(){
     $("#question").empty().append("<h3>Correct Answers: " + correct + "</h3>");
     $("#answerOne").empty().append("<h3>Incorrect Answers: " + incorrect + "</h3>");
     $("#answerTwo").empty().append("<h3>Unanswered: " + unanswered + "</h3>");
-    $("#answerThree").empty().append("");
-    $("#answerFour").empty().append("");
-    $("#answerFive").empty().append("");
+    $("#answerThree").empty().hide("");
+    $("#answerFour").empty().hide("");
+    $("#answerFive").empty().hide("");
 
   }
 
@@ -110,7 +110,8 @@ var stopwatch = {
   },
   start: function(){
     counter = setInterval(stopwatch.count, 1000);
-    questionOne()
+    questionOne();
+    $(this).parent().hide();
   },
   stop: function(){
     clearInterval(counter);

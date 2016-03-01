@@ -1,3 +1,6 @@
+body{
+	background: url("../images/audience_bg.jpg");
+}
 .wrapper{
   position: relative;
 	width: 100%;
@@ -9,6 +12,61 @@
 }
 .timer{
 	text-align: center;
-	width: 500px;
+    background: #FFFFFF;
+    padding: 20px; 
+	width: 100%;
 	margin: 0 auto;
+}
+#question{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+}
+#answerOne{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#answerTwo{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#answerThree{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px #888888;
+}
+#answerFour{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#answerFive{
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+    background: #FFFFFF;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px #888888;
 }
