@@ -92,9 +92,9 @@ function questionThree(){
 
 function results(){
 
-    $("#question").empty().append("<h3>Correct Answers: " + correct + "</h3>");
-    $("#answerOne").empty().append("<h3>Incorrect Answers: " + incorrect + "</h3>");
-    $("#answerTwo").empty().append("<h3>Unanswered: " + unanswered + "</h3>");
+    $("#question").empty().append("<h3>Correct Answers: " + correct + "</h3>" + "<h3>Incorrect Answers: " + incorrect + "</h3>" + "<h3>Unanswered: " + unanswered + "</h3>");
+    $("#answerOne").empty().hide("");
+    $("#answerTwo").empty().hide("");
     $("#answerThree").empty().hide("");
     $("#answerFour").empty().hide("");
     $("#answerFive").empty().hide("");
