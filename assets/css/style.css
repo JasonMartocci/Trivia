@@ -1,5 +1,6 @@
 body{
 	background: url("../images/audience_bg.jpg");
+	font-family: Helvetica;
 }
 .submit{
 	background-color: #4CAF50; /* Green */
@@ -20,7 +21,7 @@ body{
 	margin: 0 auto;
 }
 .container{
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
 }
 .timer{
@@ -28,38 +29,43 @@ body{
     background: #FFFFFF;
     padding: 20px; 
 	width: 100%;
-	margin: 0 auto;
+	margin-bottom: 10px;
 }
 #question{
-	width: 100%;
+	width: 50%;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 4px;
     background: #FFFFFF;
     padding: 20px; 
-    margin-top: 20px;
+	margin: 0 auto;
 }
 #answerOne{
-	width: 100%;
+	width: 50%;
 	text-align: center;
     padding: 20px; 
+	margin: 0 auto;
 }
 #answerTwo{
-	width: 100%;
+	width: 50%;
 	text-align: center;
     padding: 20px; 
+	margin: 0 auto;
 }
 #answerThree{
-	width: 100%;
+	width: 50%;
 	text-align: center;
     padding: 20px; 
+	margin: 0 auto;
 }
 #answerFour{
-	width: 100%;
+	width: 50%;
 	text-align: center;
     padding: 20px; 
+	margin: 0 auto;
 }
 #answerFive{
-	width: 100%;
+	width: 50%;
 	text-align: center;
     padding: 20px; 
+	margin: 0 auto;
 }
