@@ -34,6 +34,7 @@ function questionOne(){
 
     $(".submit").click(function(){
       questionTwo();
+      stopwatch.reset();
     });
 }
 
@@ -59,6 +60,7 @@ function questionTwo(){
 
     $(".submit").click(function(){
       questionThree();
+      stopwatch.reset();
     });
 }
 
@@ -84,6 +86,7 @@ function questionThree(){
 
     $(".submit").click(function(){
       results();
+      stopwatch.stop();
     });
 }
 
