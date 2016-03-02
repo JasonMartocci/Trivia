@@ -11,7 +11,6 @@ window.onload = function(){
 };
 
 // Trivia questions
-
 function questionOne(){
   $("#question").append("<h3>There are many blocks in 'Minecraft', but only two are affected by gravity. Which two are affected?</h3>");
   $("#answerOne").append("<button class='submit' value='incorrect'>Sand and Bedrock</button><br>");
@@ -24,18 +23,24 @@ function questionOne(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionTwo();
-      stopwatch.reset();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionTwo();
+            stopwatch.reset();
+        }
     });
+
 }
 
 function questionTwo(){
@@ -50,17 +55,22 @@ function questionTwo(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionThree();
-      stopwatch.reset();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionThree();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -76,17 +86,22 @@ function questionThree(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionFour();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionFour();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -102,17 +117,22 @@ function questionFour(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionFive();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionFive();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -128,17 +148,22 @@ function questionFive(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionSix();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionSix();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -154,17 +179,22 @@ function questionSix(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionSeven();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionSeven();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -180,17 +210,22 @@ function questionSeven(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionEight();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionEight();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -206,17 +241,22 @@ function questionEight(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionNine();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionNine();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -232,17 +272,22 @@ function questionNine(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      questionTen();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            questionTen();
+            stopwatch.reset();
+        }
     });
 }
 
@@ -258,24 +303,29 @@ function questionTen(){
         var ans = $(this);
         if(ans.val() === "correct"){
           correct++;
-          alert('You are correct');
+          $("#result").append("<button class='correctAns'>CORRECT</button><br>");
         }else if(ans.val() === "incorrect"){
           incorrect++;
+          $("#result").append("<button class='incorrectAns'>INCORRECT</button><br>");
         }else{
           unanswered++;
         }
     }); 
 
     $(".submit").click(function(){
-      results();
-      stopwatch.stop();
+      setTimeout(fiveSeconds, 5000);
+      function fiveSeconds() {
+            $("#result").empty().append("");
+            results();
+            stopwatch.stop();
+        }
     });
 }
 
 function results(){
 
     $("#question").empty().append("<h3>Correct Answers: " + correct + "</h3>" + "<h3>Incorrect Answers: " + incorrect + "</h3>" + "<h3>Unanswered: " + unanswered + "</h3>");
-    $("#answerOne").empty().hide("");
+    $("#answerOne").empty().append("<button id='start'>Start</button>");
     $("#answerTwo").empty().hide("");
     $("#answerThree").empty().hide("");
     $("#answerFour").empty().hide("");
