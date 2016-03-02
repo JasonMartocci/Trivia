@@ -13,12 +13,12 @@ window.onload = function(){
 // Trivia questions
 
 function questionOne(){
-  $("#question").append("<h3>What is two plus two?</h3>");
-  $("#answerOne").append("<button class='submit' value='incorrect'>5</button><br>");
-  $("#answerTwo").append("<button class='submit' value='incorrect'>9</button><br>");
-  $("#answerThree").append("<button class='submit' value='incorrect'>3</button><br>");
-  $("#answerFour").append("<button class='submit' value='incorrect'>8</button><br>");
-  $("#answerFive").append("<button class='submit' value='correct'>4</button><br>");
+  $("#question").append("<h3>There are many blocks in 'Minecraft', but only two are affected by gravity. Which two are affected?</h3>");
+  $("#answerOne").append("<button class='submit' value='incorrect'>Sand and Bedrock</button><br>");
+  $("#answerTwo").append("<button class='submit' value='incorrect'>Bedrock and Gravel</button><br>");
+  $("#answerThree").append("<button class='submit' value='correct'>Gravel and Sand</button><br>");
+  $("#answerFour").append("<button class='submit' value='incorrect'>Gravel and Dirt</button><br>");
+  $("#answerFive").append("<button class='submit' value='incorrect'>Earth and Air</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -39,12 +39,12 @@ function questionOne(){
 }
 
 function questionTwo(){
-  $("#question").empty().append("<h3>What is three plus two?</h3>");
-  $("#answerOne").empty().append("<button class='submit' value='correct'>5</button><br>");
-  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>7</button><br>");
-  $("#answerThree").empty().append("<button class='submit' value='incorrect'>2</button><br>");
-  $("#answerFour").empty().append("<button class='submit' value='incorrect'>9</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>3</button><br>");
+  $("#question").empty().append("<h3>What is the number of items that add up to a stack?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>999</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='correct'>64</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>23</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>44</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>126</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -65,12 +65,194 @@ function questionTwo(){
 }
 
 function questionThree(){
-  $("#question").empty().append("<h3>What is the color brown?</h3>");
-  $("#answerOne").empty().append("<button class='submit' value='correct'>5</button><br>");
-  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>7</button><br>");
-  $("#answerThree").empty().append("<button class='submit' value='incorrect'>2</button><br>");
-  $("#answerFour").empty().append("<button class='submit' value='incorrect'>9</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>3</button><br>");
+  $("#question").empty().append("<h3>What is the name of a block that might make up most of your built 'Minecraft' world?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>Earthstone</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Lavastone</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>Redstone</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='correct'>Cobblestone</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Enderstone</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionFour();
+      stopwatch.stop();
+    });
+}
+
+function questionFour(){
+  $("#question").empty().append("<h3>What does a zombie drop when killed in 'Minecraft' 1.4.5?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>Cobblestone</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Gold ingot</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='correct'>Rotten flesh</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>Meat</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Brains</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionFive();
+      stopwatch.stop();
+    });
+}
+
+function questionFive(){
+  $("#question").empty().append("<h3>What do you use to take wool from a sheep?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>Sword</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='correct'>Shears</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>Lava</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>Water</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Snow</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionSix();
+      stopwatch.stop();
+    });
+}
+
+function questionSix(){
+  $("#question").empty().append("<h3>Who is the 'feared player' in 'Minecraft'?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>Jeb</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Skydoesminecraft</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='correct'>Herobrine</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>Notch</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Steve</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionSeven();
+      stopwatch.stop();
+    });
+}
+
+function questionSeven(){
+  $("#question").empty().append("<h3>How do you sneak (by default) in the PC version of 'Minecraft'?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>By Pressing H</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='correct'>By Pressing Shift</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>By Pressing S</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>By Pressing 3</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>By Pressing Your Nose</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionEight();
+      stopwatch.stop();
+    });
+}
+
+function questionEight(){
+  $("#question").empty().append("<h3>What is the name of the 'Minecraft' Hell?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='correct'>The Nether</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>The Hether</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>The Aether</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>The Cether</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>The Shether Never</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionNine();
+      stopwatch.stop();
+    });
+}
+
+function questionNine(){
+  $("#question").empty().append("<h3>Which is NOT a Nether mob?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='correct'>The Devil</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>The Blaze</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>The Ghast</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>The Zombie Pigmen</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Skeleton</button><br>");
+
+    $("button").click(function(){
+        var ans = $(this);
+        if(ans.val() === "correct"){
+          correct++;
+          alert('You are correct');
+        }else if(ans.val() === "incorrect"){
+          incorrect++;
+        }else{
+          unanswered++;
+        }
+    }); 
+
+    $(".submit").click(function(){
+      questionTen();
+      stopwatch.stop();
+    });
+}
+
+function questionTen(){
+  $("#question").empty().append("<h3>How many colors of wool are there in 'Minecraft'?</h3>");
+  $("#answerOne").empty().append("<button class='submit' value='correct'>Sixteen</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Eighteen</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='incorrect'>Ten</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>Seventeen</button><br>");
+  $("#answerFive").empty().append("<button class='submit' value='incorrect'>One Hundred</button><br>");
 
     $("button").click(function(){
         var ans = $(this);

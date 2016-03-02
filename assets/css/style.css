@@ -26,8 +26,9 @@ body{
 }
 .timer{
 	text-align: center;
-    background: #FFFFFF;
-    padding: 20px; 
+    background: #2F0746;
+    color: #ffffff;
+    height: 70px;
 	width: 100%;
 	margin-bottom: 10px;
 }
