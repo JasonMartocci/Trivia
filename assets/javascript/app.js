@@ -13,10 +13,10 @@ window.onload = function(){
 // Trivia questions
 function questionOne(){
   $("#question").empty().append("<h3>There are many blocks in 'Minecraft', but only two are affected by gravity. Which two are affected?</h3>");
-  $("#answerOne").append("<button class='submit' value='incorrect'>Sand and Bedrock</button><br>");
-  $("#answerTwo").append("<button class='submit' value='incorrect'>Bedrock and Gravel</button><br>");
-  $("#answerThree").append("<button class='submit' value='correct'>Gravel and Sand</button><br>");
-  $("#answerFour").append("<button class='submit' value='incorrect'>Gravel and Dirt</button><br>");
+  $("#answerOne").empty().append("<button class='submit' value='incorrect'>Sand and Bedrock</button><br>");
+  $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Bedrock and Gravel</button><br>");
+  $("#answerThree").empty().append("<button class='submit' value='correct'>Gravel and Sand</button><br>");
+  $("#answerFour").empty().append("<button class='submit' value='incorrect'>Gravel and Dirt</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -319,10 +319,10 @@ function questionTen(){
 function results(){
 
     $("#question").empty().append("<h1>All done, here is how you did!</h1><br><h3>Correct Answers: " + correct + "</h3>" + "<h3>Incorrect Answers: " + incorrect + "</h3>" + "<h3>Unanswered: " + unanswered + "</h3>");
-    $("#answerOne").empty().append("<button id='start'>Start</button>");
-    $("#answerTwo").empty().hide("");
-    $("#answerThree").empty().hide("");
-    $("#answerFour").empty().hide("");
+    $("#answerOne").empty().append("<button id='start' onclick='stopwatch.start()'>Start</button>");
+    $("#answerTwo").empty().append("");
+    $("#answerThree").empty().append("");
+    $("#answerFour").empty().append("");
 
   }
 
