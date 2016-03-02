@@ -17,7 +17,6 @@ function questionOne(){
   $("#answerTwo").append("<button class='submit' value='incorrect'>Bedrock and Gravel</button><br>");
   $("#answerThree").append("<button class='submit' value='correct'>Gravel and Sand</button><br>");
   $("#answerFour").append("<button class='submit' value='incorrect'>Gravel and Dirt</button><br>");
-  $("#answerFive").append("<button class='submit' value='incorrect'>Earth and Air</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -31,6 +30,10 @@ function questionOne(){
           unanswered++;
         }
     }); 
+
+    if (stopwatch.time === 0){
+        alert("time is up");
+    }
 
     $(".submit").click(function(){
       setTimeout(fiveSeconds, 5000);
@@ -49,7 +52,6 @@ function questionTwo(){
   $("#answerTwo").empty().append("<button class='submit' value='correct'>64</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>23</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>44</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>126</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -80,7 +82,6 @@ function questionThree(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Lavastone</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>Redstone</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='correct'>Cobblestone</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Enderstone</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -111,7 +112,6 @@ function questionFour(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Gold ingot</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='correct'>Rotten flesh</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>Meat</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Brains</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -142,7 +142,6 @@ function questionFive(){
   $("#answerTwo").empty().append("<button class='submit' value='correct'>Shears</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>Lava</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>Water</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Snow</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -173,7 +172,6 @@ function questionSix(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Skydoesminecraft</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='correct'>Herobrine</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>Notch</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Steve</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -204,7 +202,6 @@ function questionSeven(){
   $("#answerTwo").empty().append("<button class='submit' value='correct'>By Pressing Shift</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>By Pressing S</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>By Pressing 3</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>By Pressing Your Nose</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -235,7 +232,6 @@ function questionEight(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>The Hether</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>The Aether</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>The Cether</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>The Shether Never</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -266,7 +262,6 @@ function questionNine(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>The Blaze</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>The Ghast</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>The Zombie Pigmen</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>Skeleton</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -297,7 +292,6 @@ function questionTen(){
   $("#answerTwo").empty().append("<button class='submit' value='incorrect'>Eighteen</button><br>");
   $("#answerThree").empty().append("<button class='submit' value='incorrect'>Ten</button><br>");
   $("#answerFour").empty().append("<button class='submit' value='incorrect'>Seventeen</button><br>");
-  $("#answerFive").empty().append("<button class='submit' value='incorrect'>One Hundred</button><br>");
 
     $("button").click(function(){
         var ans = $(this);
@@ -329,7 +323,6 @@ function results(){
     $("#answerTwo").empty().hide("");
     $("#answerThree").empty().hide("");
     $("#answerFour").empty().hide("");
-    $("#answerFive").empty().hide("");
 
   }
 
