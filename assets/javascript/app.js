@@ -10,6 +10,51 @@ window.onload = function(){
   $('#start').click(stopwatch.start);
 };
 
+// Timer function
+var stopwatch = {
+  time:30,
+  reset: function(){
+    stopwatch.time = 30;
+    $('#display').html('00:30');
+  },
+  start: function(){
+    counter = setInterval(stopwatch.count, 1000);
+    questionOne();
+    $(this).parent().hide();
+  },
+  stop: function(){
+    clearInterval(counter);
+  },
+  count: function(){
+    stopwatch.time--;
+    var converted = stopwatch.timeConverter(stopwatch.time);
+    $('#display').html(converted);
+    if (stopwatch.time === 0){
+        timeUp();
+    }
+  },
+  timeConverter: function(t){
+    var minutes = Math.floor(t/60);
+    var seconds = t - (minutes * 60);
+    if (seconds < 10){
+      seconds = "0" + seconds;
+    } 
+    if (minutes === 0){
+      minutes = "00";
+    } else if (minutes < 10){
+      minutes = "0" + minutes;
+    }
+    return minutes + ":" + seconds;
+  }
+
+};
+
+function timeUp(){
+  unanswered++;
+  // $("#result").empty().append("<button class='incorrectAns'>TIME IS UP</button><br>");
+  // setTimeout(threeSeconds, 3000);
+}
+
 // Trivia questions
 function questionOne(){
   $("#question").empty().append("<h3>There are many blocks in 'Minecraft', but only two are affected by gravity. Which two are affected?</h3>");
@@ -30,10 +75,6 @@ function questionOne(){
           unanswered++;
         }
     }); 
-
-    if (stopwatch.time === 0){
-        alert("time is up");
-    }
 
     $(".submit").click(function(){
       setTimeout(threeSeconds, 3000);
@@ -326,48 +367,7 @@ function results(){
 
   }
 
-// Timer function
-var stopwatch = {
-  time:30,
-  reset: function(){
-    stopwatch.time = 30;
-    $('#display').html('00:30');
-  },
-  start: function(){
-    counter = setInterval(stopwatch.count, 1000);
-    questionOne();
-    $(this).parent().hide();
-  },
-  stop: function(){
-    clearInterval(counter);
-  },
-  count: function(){
-    stopwatch.time--;
-    var converted = stopwatch.timeConverter(stopwatch.time);
-    $('#display').html(converted);
-    if (stopwatch.time === 0){
-        stop();
-    }
-  },
-  timeConverter: function(t){
-    var minutes = Math.floor(t/60);
-    var seconds = t - (minutes * 60);
-    if (seconds < 10){
-      seconds = "0" + seconds;
-    } 
-    if (minutes === 0){
-      minutes = "00";
-    } else if (minutes < 10){
-      minutes = "0" + minutes;
-    }
-    return minutes + ":" + seconds;
-  }
 
-};
-
-function stop(){
-  //clearInterval(counter);
-}
 
 
 
