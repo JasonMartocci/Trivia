@@ -36,8 +36,8 @@ function questionOne(){
     }
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionTwo();
             stopwatch.reset();
@@ -67,8 +67,8 @@ function questionTwo(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionThree();
             stopwatch.reset();
@@ -97,8 +97,8 @@ function questionThree(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionFour();
             stopwatch.reset();
@@ -127,8 +127,8 @@ function questionFour(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionFive();
             stopwatch.reset();
@@ -157,8 +157,8 @@ function questionFive(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionSix();
             stopwatch.reset();
@@ -187,8 +187,8 @@ function questionSix(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionSeven();
             stopwatch.reset();
@@ -217,8 +217,8 @@ function questionSeven(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionEight();
             stopwatch.reset();
@@ -247,8 +247,8 @@ function questionEight(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionNine();
             stopwatch.reset();
@@ -277,8 +277,8 @@ function questionNine(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             questionTen();
             stopwatch.reset();
@@ -307,8 +307,8 @@ function questionTen(){
     }); 
 
     $(".submit").click(function(){
-      setTimeout(fiveSeconds, 5000);
-      function fiveSeconds() {
+      setTimeout(threeSeconds, 3000);
+      function threeSeconds() {
             $("#result").empty().append("");
             results();
             stopwatch.stop();
