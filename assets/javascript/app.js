@@ -19,6 +19,9 @@ var stopwatch = {
   },
   start: function(){
     counter = setInterval(stopwatch.count, 1000);
+    correct = 0;
+    incorrect = 0;
+    unanswered = 0;
     questionOne();
     $(this).parent().hide();
   },
@@ -359,8 +362,8 @@ function questionTen(){
 
 function results(){
 
-    $("#question").empty().append("<h1>All done, here is how you did!</h1><br><h3>Correct Answers: " + correct + "</h3>" + "<h3>Incorrect Answers: " + incorrect + "</h3>" + "<h3>Unanswered: " + unanswered + "</h3>");
-    $("#answerOne").empty().append("<button id='start' onclick='stopwatch.start()'>Start</button>");
+    $("#question").empty().append("<h1>All done, here is how you did!</h1><br><br><h3>Correct Answers: " + correct + "</h3><br><br>" + "<h3>Incorrect Answers: " + incorrect + "</h3><br><br>" + "<h3>Unanswered: " + unanswered + "</h3>");
+    $("#answerOne").empty().append("<button id='start' onclick='stopwatch.start()'>Start New Game</button>");
     $("#answerTwo").empty().append("");
     $("#answerThree").empty().append("");
     $("#answerFour").empty().append("");
